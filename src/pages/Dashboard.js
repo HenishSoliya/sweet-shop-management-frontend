@@ -5,7 +5,7 @@ import SearchSweets from "../components/SearchSweets";
 
 const Dashboard = () => {
     const [sweets, setSweets] = useState([]);
-    const [loading, setLoading] = useState(false);
+    const [loading, setLoading] = useState(true);
 
     const fetchSweets = ({API}={}) => {
         fetch(API || API_ENDPOINTS.SWEETS)
