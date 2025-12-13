@@ -1,4 +1,6 @@
-const SweetTable = ({ sweets, onEdit, onDelete }) => {
+import Restock from "./Restock";
+
+const SweetTable = ({ sweets, onEdit, onDelete, onRestock }) => {
   return (
     <table className="w-full border">
       <thead className="bg-gray-100">
@@ -30,6 +32,7 @@ const SweetTable = ({ sweets, onEdit, onDelete }) => {
               >
                 Delete
               </button>
+              <Restock sweetId={sweet.id} onRestock={onRestock}/>
             </td>
           </tr>
         ))}

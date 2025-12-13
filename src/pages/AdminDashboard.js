@@ -46,6 +46,28 @@ const AdminDashboard = () => {
         }
     };
 
+    const handleRestock = async (id, amount) => {
+        try {
+            const response = await fetch(
+                `${API_ENDPOINTS.RESTOCK}/${id}/${amount}`,
+                {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                    }
+                }
+            );
+            alert(await response.text());
+            if (!response.ok) {
+                throw new Error("Restock failed");
+            }
+        } catch (error) {
+            console.error(error);
+        } finally {
+            fetchSweets();
+        }
+    }
+
     return (
         <div className="p-6">
             <h1 className="text-2xl font-bold mb-4">Admin Panel</h1>
@@ -62,6 +84,7 @@ const AdminDashboard = () => {
                 sweets={sweets}
                 onEdit={handleEdit}
                 onDelete={handleDelete}
+                onRestock={handleRestock}
             />
         </div>
     );
