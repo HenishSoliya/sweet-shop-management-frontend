@@ -1,13 +1,14 @@
 import { useEffect, useState } from "react";
 import { API_ENDPOINTS } from "../config/api";
 import SweetCard from "../components/SweetCard";
+import SearchSweets from "../components/SearchSweets";
 
 const Dashboard = () => {
     const [sweets, setSweets] = useState([]);
     const [loading, setLoading] = useState(false);
 
-    const fetchSweets = () => {
-        fetch(API_ENDPOINTS.SWEETS)
+    const fetchSweets = ({API}={}) => {
+        fetch(API || API_ENDPOINTS.SWEETS)
             .then((res) => res.json())
             .then((data) => {
                 setSweets(data);
@@ -36,6 +37,8 @@ const Dashboard = () => {
             <h1 className="text-3xl font-bold text-center mb-8 text-pink-600">
                 🍬 Sweets Shop
             </h1>
+
+            <SearchSweets fetchSweets={fetchSweets}/>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                 {sweets.map((sweet) => (
