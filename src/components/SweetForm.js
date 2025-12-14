@@ -27,11 +27,14 @@ const SweetForm = ({ selectedSweet, onSuccess }) => {
 
     await fetch(API_ENDPOINTS.SWEETS, {
       method,
-      headers: { "Content-Type": "application/json" },
+      headers: {
+        "Content-Type": "application/json",
+        'Authorization': `Bearer ${sessionStorage.getItem('authToken')}`
+      },
       body: JSON.stringify(sweet),
     });
 
-    setSweet({id:0, name: "", category: "", price: "", quantity: "" });
+    setSweet({ id: 0, name: "", category: "", price: "", quantity: "" });
     onSuccess();
   };
 

@@ -1,8 +1,8 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { AuthProvider } from "./auth/AuthContext";
 import ProtectedRoute from "./auth/ProtectedRoute"
-import Dashboard from "./pages/Dashboard"
 import Auth from "./pages/Auth";
+import DashboardRouter from "./pages/DashboardRouter";
 import './App.css';
 
 function App() {
@@ -15,7 +15,7 @@ function App() {
             path="/dashboard"
             element={
               <ProtectedRoute>
-                <Dashboard />
+                <DashboardRouter />
               </ProtectedRoute>
             }
           />

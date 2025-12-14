@@ -9,7 +9,13 @@ const AdminDashboard = () => {
     const [loading, setLoading] = useState(true);
 
     const fetchSweets = () => {
-        fetch(API_ENDPOINTS.SWEETS)
+        fetch(API_ENDPOINTS.SWEETS, {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${sessionStorage.getItem('authToken')}`
+            }
+        })
             .then((res) => res.json())
             .then((data) => {
                 setSweets(data);
@@ -41,6 +47,10 @@ const AdminDashboard = () => {
         if (window.confirm("Are you sure to delete this sweet?")) {
             await fetch(`${API_ENDPOINTS.SWEETS}/${id}`, {
                 method: "DELETE",
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${sessionStorage.getItem('authToken')}`
+                }
             });
             fetchSweets();
         }
@@ -54,6 +64,7 @@ const AdminDashboard = () => {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json",
+                        'Authorization': `Bearer ${sessionStorage.getItem('authToken')}`
                     }
                 }
             );
