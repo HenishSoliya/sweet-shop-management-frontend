@@ -1,70 +1,103 @@
-# Getting Started with Create React App
+# 🍬 Sweet Shop Management System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This repository documentation covers **Frontend** of the Sweet Shop Management System. Each section includes project explanation, local setup instructions, screenshots, **My AI Usage**, and Future Scope.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+# 📘 Frontend
 
-### `npm start`
+## 📌 Project Overview
+The **Sweet Shop Management System Frontend** is a web-based user interface that allows users to interact with the Sweet Shop Management backend services. It provides features such as managing sweets, viewing inventory, and performing shop-related operations through a clean and responsive UI.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The frontend communicates with the backend via REST APIs and focuses on usability, responsiveness, and clarity.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## 🛠️ Tech Stack
+- **Framework:** React.js
+- **Language:** JavaScript
+- **Styling:** TailwindCSS, CSS
+- **Package Manager:** npm
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## ⚙️ Setup & Run Instructions (Frontend)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Prerequisites
+Make sure you have the following installed:
+- Node.js
+- npm (comes with Node.js)
+- Git
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Clone the Repository
+```bash
+git clone https://github.com/HenishSoliya/sweet-shop-management-frontend.git
+cd sweet-shop-management-frontend
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Update API Endpoints
+Change `BASE_URL` in `./src/config/api.js` if required.
+![api.js Path](Images/apijspath.png)
+![api.js](Images/apijs.png)
 
-### `npm run eject`
+### Install Dependencies
+```bash
+npm install
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Run the Application Locally
+```bash
+npm start
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The frontend application will start on:
+```
+http://localhost:3000
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+> ⚠️ Ensure the backend server is running so API requests work correctly.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+## 🖼️ Screenshots
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1. Register and Login Page
+![Register](Images/Register.png)
+![Login](Images/Login.png)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+2. USER Dashboard
+![USER Dashboard 1](Images/1.png)
+![USER Dashboard 2](Images/2.png)
+![USER Dashboard 3](Images/3.png)
+![USER Dashboard 4](Images/4.png)
+![USER Dashboard 5](Images/5.png)
 
-### Code Splitting
+3. ADMIN Dashboard
+![ADMIN Dashboard 1](Images/A1.png)
+![ADMIN Dashboard 2](Images/A2.png)
+![ADMIN Dashboard 3](Images/A3.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
+## 🤖 My AI Usage
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### AI Tools Used
+- **ChatGPT**
 
-### Making a Progressive Web App
+### How I Used Them
+- Used ChatGPT to understand React concepts and component structuring.
+- Take help of ChatGPT for make Good looking UI.
+- Used ChatGPT to assist in writing this README documentation.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Reflection on AI Impact
+Using ChatGPT significantly improved my development workflow by reducing the time spent searching for solutions and documentation. It helped me better understand frontend best practices, debug issues faster, and stay productive throughout development. AI acted as a supportive learning and productivity tool rather than a replacement for core development effort.
 
-### Advanced Configuration
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## 🚀 Future Scope
 
-### Deployment
+The frontend of the Sweet Shop Management System can be enhanced in the future with the following improvements:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+* Improved UI/UX: Enhance the user interface with modern design systems, animations, and better accessibility support.
+* Form Validation & Error Handling: Add advanced client-side validation and user-friendly error messages.
+* Performance Optimization: Optimize component rendering and API calls to improve application performance.
