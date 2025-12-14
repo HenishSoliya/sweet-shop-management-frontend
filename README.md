@@ -36,8 +36,8 @@ cd sweet-shop-management-frontend
 ```
 
 ### Update API Endpoints
-Change `BASE_URL` in `./src/config/api.js` if required.
-![api.js Path](Images/apijspath.png)
+Change `BASE_URL` in `./src/config/api.js` if required. <br>
+![api.js Path](Images/apijspath.png) <br>
 ![api.js](Images/apijs.png)
 
 ### Install Dependencies
@@ -50,10 +50,7 @@ npm install
 npm start
 ```
 
-The frontend application will start on:
-```
-http://localhost:3000
-```
+The frontend application will start on: `http://localhost:3000`
 
 > ⚠️ Ensure the backend server is running so API requests work correctly.
 
@@ -61,18 +58,18 @@ http://localhost:3000
 
 ## 🖼️ Screenshots
 
-1. Register and Login Page
+1. Register and Login Page <br>
 ![Register](Images/Register.png)
 ![Login](Images/Login.png)
 
-2. USER Dashboard
+2. USER Dashboard <br>
 ![USER Dashboard 1](Images/1.png)
 ![USER Dashboard 2](Images/2.png)
 ![USER Dashboard 3](Images/3.png)
 ![USER Dashboard 4](Images/4.png)
 ![USER Dashboard 5](Images/5.png)
 
-3. ADMIN Dashboard
+3. ADMIN Dashboard <br>
 ![ADMIN Dashboard 1](Images/A1.png)
 ![ADMIN Dashboard 2](Images/A2.png)
 ![ADMIN Dashboard 3](Images/A3.png)
