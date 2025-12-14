@@ -7,8 +7,14 @@ const Dashboard = () => {
     const [sweets, setSweets] = useState([]);
     const [loading, setLoading] = useState(true);
 
-    const fetchSweets = ({API}={}) => {
-        fetch(API || API_ENDPOINTS.SWEETS)
+    const fetchSweets = ({ API } = {}) => {
+        fetch(API || API_ENDPOINTS.SWEETS, {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${sessionStorage.getItem('authToken')}`
+            }
+        })
             .then((res) => res.json())
             .then((data) => {
                 setSweets(data);
@@ -38,7 +44,7 @@ const Dashboard = () => {
                 🍬 Sweets Shop
             </h1>
 
-            <SearchSweets fetchSweets={fetchSweets}/>
+            <SearchSweets fetchSweets={fetchSweets} />
 
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                 {sweets.map((sweet) => (

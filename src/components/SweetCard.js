@@ -16,6 +16,7 @@ const SweetCard = ({ sweet, refreshSweets }) => {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
+            "Authorization": `Bearer ${sessionStorage.getItem('authToken')}`
           }
         }
       );
